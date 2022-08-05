@@ -1,0 +1,29 @@
+.footer{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    padding: 1em 3em;
+    height: 8vh;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.social_list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1em;
+}
+.social_list li{
+    margin: 0 auto;
+    transition: all .4s ease-in-out;
+}
+.social_list li svg{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.social_list li svg:hover{
+    color: #ffbb33;
+}

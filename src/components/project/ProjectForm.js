@@ -3,39 +3,62 @@ import Input from "../form/Input";
 import Select from "../form/Select";
 import SubmitButton from "../form/SubmitButton";
 import {useState, useEffect} from "react";
-function ProjectForm({btnText}) {
+
+function ProjectForm({handleSubmit, btnText, projectData}) {
   const [categories, setCategories] = useState([]);
+  const [project, setProject] = useState(projectData || {});
+
+  const submit = e => {
+    e.preventDefault();
+    handleSubmit(project);
+  }
+  function handleChange(e){
+    setProject({ ...project, [e.target.name]: e.target.value})
+  }
+  function handleCategory(e){
+    setProject({ ...project, category: {
+        id: e.target.value,
+        name: e.target.options[e.target.selectedIndex].text,
+    }})
+  }
+
   useEffect(() => {
-    fetch('http://localhost:5000/categories', {
-      method: 'GET',
+    fetch("http://localhost:5000/categories", {
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setCategories(data)
-      })
-  }, [])
+        setCategories(data);
+      });
+  }, []);
 
   return (
-    <form className={styles.form}>
+    <form onSubmit={submit} className={styles.form}>
       <Input
         type="type"
         text="Nome do projeto"
         name="name"
         placeholder="Insira o nome do projeto"
+        handleOnChange={handleChange}
+        value={project.name ? project.name : ''}
       />
       <Input
         type="number"
         text="Orçamento do projeto"
         name="budget"
         placeholder="Insira o orçamento do projeto"
+        handleOnChange={handleChange}
+        value={project.budget ? project.budget : ''}
       />
       <Select
         name="category_id"
         text="Selecione a categoria"
         options={categories}
+        handleOnChange={handleCategory}
+        value={project.category ? project.category.id : ''}
       />
       <SubmitButton text={btnText} />
     </form>

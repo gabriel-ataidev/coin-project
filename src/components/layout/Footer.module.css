@@ -20,10 +20,10 @@
     margin: 0 auto;
     transition: all .4s ease-in-out;
 }
+.social_list li:hover{
+    color: #ffbb33;
+}
 .social_list li svg{
     font-size: 1.5em;
     cursor: pointer;
-}
-.social_list li svg:hover{
-    color: #ffbb33;
 }

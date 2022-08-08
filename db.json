@@ -32,6 +32,39 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "gabrieo",
+      "budget": "3333",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "gabrieo",
+      "budget": "11",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "name": "gabrieo",
+      "budget": "22",
+      "category": {
+        "id": "4",
+        "name": "Plnejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 6
     }
   ],
   "categories": [

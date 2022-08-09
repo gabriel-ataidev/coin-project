@@ -1,7 +1,18 @@
 {
   "projects": [
     {
-      "name": "gg",
+      "name": "22",
+      "budget": "222",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 1
+    },
+    {
+      "name": "22",
       "budget": "33",
       "category": {
         "id": "2",
@@ -9,62 +20,29 @@
       },
       "cost": 0,
       "services": [],
-      "id": 1
-    },
-    {
-      "name": "CARLOS A P ATAIDE",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "budget": "3333",
-      "cost": 0,
-      "services": [],
       "id": 2
     },
     {
-      "name": "gabrieo",
-      "budget": "44",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "gabrieo",
-      "budget": "3333",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "gabrieo",
-      "budget": "11",
+      "name": "eee",
+      "budget": "33",
       "category": {
         "id": "3",
         "name": "Design"
       },
       "cost": 0,
       "services": [],
-      "id": 5
+      "id": 3
     },
     {
-      "name": "gabrieo",
-      "budget": "22",
       "category": {
         "id": "4",
-        "name": "Plnejamento"
+        "name": "Planejamento"
       },
+      "name": "3333",
+      "budget": "2222",
       "cost": 0,
       "services": [],
-      "id": 6
+      "id": 4
     }
   ],
   "categories": [
@@ -82,7 +60,7 @@
     },
     {
       "id": 4,
-      "name": "Plnejamento"
+      "name": "Planejamento"
     }
   ]
 }

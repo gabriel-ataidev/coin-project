@@ -9,7 +9,8 @@ import {useState, useEffect} from "react";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
-  const [removeLoading, setRemoveLoading] = useState(false)
+  const [removeLoading, setRemoveLoading] = useState(false);
+  const [projectMessage, setProjectMessage] = useState([])
   const location = useLocation();
   let message = "";
   if (location.state) {
@@ -20,20 +21,34 @@ function Projects() {
     // Para ver o loading
     setTimeout(
       () =>
-        fetch('http://localhost:5000/projects', {
-          method: 'GET',
+        fetch("http://localhost:5000/projects", {
+          method: "GET",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         })
           .then((resp) => resp.json())
           .then((data) => {
-            setProjects(data)
-            setRemoveLoading(true)
+            setProjects(data);
+            setRemoveLoading(true);
           }),
-      500,
-    )
-  }, [])
+      500
+    );
+  }, []);
+
+  function removeProject(id) {
+    fetch(`http://localhost:5000/projects/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application-json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then(() => {
+        setProjects(projects.filter((project) => project.id !== id))
+        setProjectMessage('Projeto removido com sucesso!')
+      })
+  }
 
   return (
     <div className={styles.project_container}>
@@ -42,19 +57,23 @@ function Projects() {
         <LinkButton to="/newproject" text="Criar Projeto" />
       </div>
       {message && <Message msg={message} type="success" />}
+      {projectMessage && <Message msg={projectMessage} type="success" />}
       <Container customClass="start">
-      {projects.length > 0 &&
+        {projects.length > 0 &&
           projects.map((project) => (
             <ProjectCard
               id={project.id}
               name={project.name}
               budget={project.budget}
-              category={project.category ? project.category.name : project.category}
+              category={
+                project.category ? project.category.name : project.category
+              }
               key={project.id}
+              handleRemove={removeProject}
             />
           ))}
-          {!removeLoading && <Loading/>}
-          {removeLoading && projects.length === 0 && (
+        {!removeLoading && <Loading />}
+        {removeLoading && projects.length === 0 && (
           <p>Não há projetos cadastrados!</p>
         )}
       </Container>

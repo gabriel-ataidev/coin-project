@@ -10,6 +10,7 @@ function Project() {
   const {id} = useParams();
   const [project, setProject] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
+  const [showServiceForm, setShowServiceForm] = useState(false);
   const [message, setMessage] = useState();
   const [type, setType] = useState();
   useEffect(() => {
@@ -24,6 +25,7 @@ function Project() {
   }, [id]);
 
   function editPost(project) {
+    setMessage('')
     //budget validation
     if (project.budget < project.cost) {
       setMessage("O orçamento nao pode ser menor que o custo do projeto");
@@ -46,6 +48,9 @@ function Project() {
 
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm);
+  }
+  function toggleServiceForm() {
+    setShowServiceForm(!showServiceForm);
   }
 
   return (
@@ -81,6 +86,19 @@ function Project() {
                 </div>
               )}
             </div>
+            <div className={styles.service_form_container}>
+                <h2>Adicione um serviço</h2>
+                <button className={styles.btn} onClick={toggleServiceForm}>
+                {!showServiceForm ? "Adicionar serviço" : "Fechar"}
+              </button>
+              <div className={styles.project_info}>
+                {showServiceForm && <div>formulario do serviço</div>}
+              </div>
+            </div>
+            <h2>serviços</h2>
+            <Container customClass="start">
+                <p>itens de serviço</p>
+            </Container>
           </Container>
         </div>
       ) : (

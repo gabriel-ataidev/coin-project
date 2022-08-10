@@ -18,7 +18,7 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 2400,
+      "cost": 2423,
       "services": [
         {
           "name": "gabrieo",
@@ -79,6 +79,12 @@
           "cost": "56",
           "description": "hh",
           "id": "8e83b3e1-77f9-4d9c-805a-3246713e8aa5"
+        },
+        {
+          "name": "novo serviço",
+          "cost": "23",
+          "description": "trabalho rapido",
+          "id": "9edfa6cc-65d0-4e9e-a31e-4daf8cde4a15"
         }
       ],
       "id": 2

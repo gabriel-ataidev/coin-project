@@ -1,93 +1,22 @@
 {
   "projects": [
     {
-      "name": "gabrieo",
-      "budget": "33",
+      "name": "Gabriel dos Santos Ataide",
+      "budget": "4000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "funcionando",
-      "budget": "5000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 2423,
+      "cost": 33,
       "services": [
         {
-          "name": "gabrieo",
-          "cost": "56",
-          "description": "ff",
-          "id": "07da78b1-88a5-4e1e-b1dc-a6c1272e9f0d"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "788",
-          "description": "ff",
-          "id": "ea73d4de-cedd-4358-90f3-1484dd91e1b2"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "89",
-          "description": "ff",
-          "id": "0c32e41d-7586-40cb-a5d1-457b976ccece"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "89",
-          "description": "ff",
-          "id": "0c32e41d-7586-40cb-a5d1-457b976ccece"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "56",
-          "description": "tal",
-          "id": "ffb1ce16-bfca-4ff3-8776-cc39a6bcfb37"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "56",
-          "description": "tal",
-          "id": "ffb1ce16-bfca-4ff3-8776-cc39a6bcfb37"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "56",
-          "description": "tal",
-          "id": "ffb1ce16-bfca-4ff3-8776-cc39a6bcfb37"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "577",
-          "description": "tal",
-          "id": "c2c2930f-6c51-4860-a791-46959c11906b"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "577",
-          "description": "tal",
-          "id": "c2c2930f-6c51-4860-a791-46959c11906b"
-        },
-        {
-          "name": "gabrieo",
-          "cost": "56",
-          "description": "hh",
-          "id": "8e83b3e1-77f9-4d9c-805a-3246713e8aa5"
-        },
-        {
-          "name": "novo serviço",
-          "cost": "23",
-          "description": "trabalho rapido",
-          "id": "9edfa6cc-65d0-4e9e-a31e-4daf8cde4a15"
+          "name": "ww",
+          "cost": "33",
+          "description": "dd",
+          "id": "4cf83020-c879-4707-ab5e-f6312a5d52ae"
         }
       ],
-      "id": 2
+      "id": 1
     }
   ],
   "categories": [
